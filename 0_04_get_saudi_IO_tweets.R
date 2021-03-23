@@ -197,7 +197,6 @@ for (i in seq_along(files)) {
   filename = files[[i]]
   cat("Ingesting filename:", filename, "\n")
   tweets <- read.csv(filename)
-  # tweets <- tweets[,c(1,2,4,5,8,9,10,13,14,24:27)] # select columns to reduce file size
   tweets$date <- as.Date(tweets$tweet_time)
   tweets$year <- year(tweets$date)
   tweets <- tweets %>%
