@@ -1,5 +1,6 @@
 # kingdomtrolls
-The 
+
+README for "Kingdom of Trolls? Influence Operations in the Saudi Twittersphere," Journal of Quantitative Description. 2021.
 
 ```
 ├── 0_00_saudistream.ipynb
