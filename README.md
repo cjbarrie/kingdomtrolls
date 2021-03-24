@@ -2,6 +2,8 @@
 
 README for "Kingdom of Trolls? Influence Operations in the Saudi Twittersphere," Journal of Quantitative Description. 2021.
 
+![](exIO2.png)
+
 ```
 ├── 0_00_saudistream.ipynb
 ├── 0_01_saudistream_gencsv.ipynb
