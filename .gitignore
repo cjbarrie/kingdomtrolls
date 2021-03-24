@@ -7,3 +7,8 @@
 .Rproj.user
 .DS_Store
 .ipynb_checkpoints
+data/replication_tweetIDs/GEOusertweets19_allIDS.txt
+data/replication_tweetIDs/IOtweets19_allIDS.txt
+data/replication_tweetIDs/NEWSusertweets19_allIDS.txt
+data/replication_tweetIDs/SAusertweets19_allIDS.txt
+data/replication_tweetIDs/TOPusertweets19_allIDS.txt
