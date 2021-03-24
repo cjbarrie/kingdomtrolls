@@ -23,12 +23,21 @@ The
 ├── 1_07_top_hashtags_news_tweets.R
 ├── 1_08_compare_samp_characteristics.R
 ├── 1_09_compare_alt_topics.R
+├── README.Rmd
+├── README.md
+├── README.pdf
 ├── data
 │   ├── analysis
 │   ├── output
 │   │   ├── saudigeousertweets
 │   │   ├── saudigeousertweets_combined
 │   │   └── saudiusertweets
+│   ├── replication_tweetIDs
+│   │   ├── GEOusertweets19_allIDS.txt
+│   │   ├── IOtweets19_allIDS.txt
+│   │   ├── NEWSusertweets19_allIDS.txt
+│   │   ├── SAusertweets19_allIDS.txt
+│   │   └── TOPusertweets19_allIDS.txt
 │   └── shapefiles
 │       ├── SAgeopoints.dbf
 │       ├── SAgeopoints.prj
