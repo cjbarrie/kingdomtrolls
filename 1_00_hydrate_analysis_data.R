@@ -3,7 +3,9 @@ library(rtweet)
 
 #OPTION 1: USE HYDRATOR FROM https://github.com/DocNow/hydrator
 #TAKE TWEET IDs FROM data/raw/ and hydrate to get SA, GEO, NEWS, and TOP samples
-#OR:
+
+
+#OR OPTION 2:
 api_key <-"ENTER>api_key"
 api_key_secret <- "ENTER>api_key_secret"
 access_token <- "ENTER>access_token"
@@ -17,8 +19,10 @@ token <- create_token(
   access_secret = access_token_secret
 )
 
-SAIDs <- read.table("data/raw/SAusertweets19_allIDs.txt")
+SAIDs <- read.table("data/replication_tweetIDs/SAusertweets19_allIDs.txt")
 SAusertweets19_all <- lookup_statuses(SAIDs)
+
+save(SAusertweets19_all, file = "data/analysis/SAusertweets19_all.RData")
 
 #then repeat for GEO, NEWS, and TOP IDs
 
@@ -29,7 +33,7 @@ SAusertweets19_all <- lookup_statuses(SAIDs)
 #datasets stored as "sa_eg_ae_022020_tweets_csv_unhashed/" for Release 2 and "saudi_arabia_112019_tweets_csv_unhashed/" for Release 1
 #once imported, identify relevant tweets with e.g.:
 
-IOIDs <- read.table("data/raw/IOusertweets19_allIDs.txt")
+IOIDs <- read.table("data/replication_tweetIDs/IOusertweets19_allIDs.txt")
 
 #GET ALL R1 TWEETS
 files <- list.files(path=file.path("/PATH/TO/IO_tweets_file/saudi_arabia_112019_tweets_csv_unhashed/"),recursive=T,include.dirs=T)

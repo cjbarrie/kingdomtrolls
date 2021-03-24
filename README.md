@@ -1,5 +1,5 @@
 # kingdomtrolls
-Repo for Kingdom of Trolls paper. Version control for Harvard Dataverse upload.
+The 
 
 ```
 ├── 0_00_saudistream.ipynb
