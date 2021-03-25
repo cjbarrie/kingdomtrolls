@@ -19,12 +19,25 @@ token <- create_token(
   access_secret = access_token_secret
 )
 
+#for SA sample
 SAIDs <- read.table("data/replication_tweetIDs/SAusertweets19_allIDs.txt")
 SAusertweets19_all <- lookup_statuses(SAIDs)
-
 save(SAusertweets19_all, file = "data/analysis/SAusertweets19_all.RData")
 
-#then repeat for GEO, NEWS, and TOP IDs
+#for GEO sample
+GEOIDs <- read.table("data/replication_tweetIDs/GEOusertweets19_allIDs.txt")
+GEOusertweets19_all <- lookup_statuses(GEOIDs)
+save(GEOusertweets19_all, file = "data/analysis/GEOusertweets19_all.RData")
+
+#for NEWS sample
+NEWSIDs <- read.table("data/replication_tweetIDs/NEWSusertweets19_allIDs.txt")
+NEWSusertweets19_all <- lookup_statuses(NEWSIDs)
+save(NEWSusertweets19_all, file = "data/analysis/NEWSusertweets19_all.RData")
+
+#for TOP sample
+TOPIDs <- read.table("data/replication_tweetIDs/TOPusertweets19_allIDs.txt")
+TOPusertweets19_all <- lookup_statuses(TOPIDs)
+save(TOPusertweets19_all, file = "data/analysis/TOPusertweets19_all.RData")
 
 ###########################################
 
