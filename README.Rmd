@@ -55,10 +55,11 @@ The below describes the overall file structure:
 #compare engagement with other political across IO, SA, GEO, NEWS, and TOP
 ├── 1_09_compare_alt_topics.R 
 
-#folder structure:
+#folder structure for relative file paths in scripts:
 ├── data
 │   ├── analysis
 │   ├── output
+│   │   ├── plots
 │   │   ├── saudigeousertweets
 │   │   ├── saudigeousertweets_combined
 │   │   └── saudiusertweets
