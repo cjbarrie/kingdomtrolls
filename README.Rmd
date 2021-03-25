@@ -7,6 +7,8 @@ output:
     latex_engine: xelatex
 ---
 
+## File structure
+
 The below describes the overall file structure:
 
 ```{r, engine = "bash", eval=F}
@@ -88,10 +90,28 @@ The below describes the overall file structure:
 
 ```
 
+## Data collection and hydration scripts
+
 Scripts numbered with prefix "0_" are used to collect the tweet datasets used in the analyses. The TOP and NEWS tweets were streamed with the proprietary Historical Power Track API and so we do not include code used for their collection. The original GEO tweets were also collected using the Historical Power Track API and so we do not include code used for their collection. The IO tweets were taken from the unhashed versions, which are accessible via application to Twitter Transparency [here](https://transparency.twitter.com/en/reports/information-operations.html). The publicly available unhashed versions, available at the same address, are an alternative to the unhashed data: they differ only in that the usernames and other identifying information of users with < 5000 followers are omitted.
 
 The scripts numbered with prefix "0_"are included in these replication files for the sake of completeness and transparency. Given that thecdata were collected in 2020, and the API returns only a random subsample of tweets, using the same scripts now to query the Twitter API will not return the same data. 
 
 As such, we provide an additional script "1_00_hydrate_analysis_data.R" that can be used to hydrate tweets IDs for all non-IO datasets; i.e., the SA, GEO, NEWS, and TOP samples. It is worth noting that hydrating these tweets will not result in exactly the same sample sizes or tweets as tweets that have subsequently been deleted will not be retrievable. We also provide the IDs for the IO tweets, which will save researchers time if they wish to filter the Saudi Arabia IO tweets provided by Twitter Transparency to include only those tweets we include in our analyses. Example scripts for how to do this are also provided.
 
-All subsequent scripts with prefix "1_" include the code used to analyze the five tweet samples used in the article.
+## Analysis scripts
+
+All subsequent scripts with prefix "1_" include the code used to analyze the five tweet samples used in the article. The purpose of each script is describe in the file tree above. 
+
+
+## Sample characteristics
+
+The sample characteristics for our final five analysis samples are tabulated below.
+
+
+| Sample      | N. tweets | N. accounts |
+| ----------- | ----------- | ----------- |
+| IO     | 9,826,132    | 4,536 |
+| SA | 4,697,930 |  7,418 |
+| GEO | 11,332,330 |  20,115 |
+| NEWS | 449,320 |  15 |
+| TOP | 145,243 |  41 |
